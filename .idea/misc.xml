@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Personal/Straizen/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
+        <entry key="..\:/Personal/Straizen/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
         <entry key="..\:/Personal/Straizen/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Personal/Straizen/app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
+        <entry key="..\:/Personal/Straizen/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Personal/Straizen/app/src/main/res/layout/fragment_notifications.xml" value="0.25" />
       </map>
     </option>
   </component>

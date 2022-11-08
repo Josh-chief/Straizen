@@ -1,8 +1,3 @@
 <resources>
-    <string name="app_name">Straizen</string>
-    <string name="title_activity_dashboard">Home</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Feed</string>
-    <string name="title_notifications">Profile</string>
-
+    <string name="app_name">stratizen</string>
 </resources>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.stratizen.R
+import com.example.stratizen.dashboard
 import com.example.stratizen.signup_page
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +20,12 @@ class MainActivity : AppCompatActivity() {
             val registration = Intent(this, signup_page::class.java)
 
             startActivity(registration)
+        }
+
+        loginbutton.setOnClickListener{
+            val login = Intent(this, dashboard::class.java)
+
+            startActivity(login)
         }
     }
 }

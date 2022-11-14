@@ -10,4 +10,6 @@
     <string name="create_account_question">Don\'t have an account? Create one now</string>
     <string name="create_account">Create Account</string>
     <string name="re_enter_password">Re-enter Password</string>
+    <string name="usernameFirstNameRegistration">First Name</string>
+    <string name="userLastNameRegistration">Last Name</string>
 </resources>

@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.stratizen.R
-import com.example.stratizen.dashboard
 import com.example.stratizen.signup_page
+import com.example.stratizen.user_home
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         loginbutton.setOnClickListener{
-            val login = Intent(this, dashboard::class.java)
+            val login = Intent(this, user_home::class.java)
 
             startActivity(login)
         }

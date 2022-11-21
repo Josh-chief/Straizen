@@ -34,7 +34,7 @@
         android:id="@+id/userFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/usernameFirstNameRegistration"
+        android:text="@string/usernameFullName"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/lblInfo"
@@ -63,38 +63,7 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/userLastName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/userLastNameRegistration"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/studentFirstName"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="40sp"
-        android:layout_marginTop="14sp"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/studentLastName"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint=""
-        app:layout_constraintTop_toBottomOf="@id/userLastName"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="40sp"
-        android:layout_marginTop="14sp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp">
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/lblStudentNo"
@@ -103,7 +72,7 @@
         android:text="@string/login_username"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/studentLastName"
+        app:layout_constraintTop_toBottomOf="@id/studentFirstName"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="40sp"
         android:layout_marginTop="14sp"/>

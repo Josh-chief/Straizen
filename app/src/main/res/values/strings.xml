@@ -12,4 +12,5 @@
     <string name="re_enter_password">Re-enter Password</string>
     <string name="usernameFirstNameRegistration">First Name</string>
     <string name="userLastNameRegistration">Last Name</string>
+    <string name="title_activity_test">test</string>
 </resources>

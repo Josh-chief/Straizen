@@ -7,9 +7,12 @@
     <string name="login_username">Student Number:</string>
     <string name="login_password">Password:</string>
     <string name="login">Login</string>
-    <string name="create_account_question">Forgot password</string>
+    <string name="create_account_question"><u>Forgot password</u></string>
     <string name="create_account">Create Account</string>
     <string name="re_enter_password">Re-enter Password</string>
     <string name="usernameFullName">Full Name</string>
     <string name="title_activity_user_home">user_home</string>
+    <string name="user_Already"><u>Already a user ? Sign In</u></string>
+    <string name="Submit">Submit</string>
+    <string name="Password_reset">Please enter the email of your account you want to reset</string>
 </resources>

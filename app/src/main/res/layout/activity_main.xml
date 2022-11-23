@@ -12,90 +12,71 @@
         android:id="@+id/strathLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
         android:layout_marginTop="64dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/strathmore_logo"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/lblInfo"/>
 
     <TextView
         android:id="@+id/lblInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28sp"
         android:text="@string/login_instructions"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/strathLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/studentID"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="40sp"
-        android:layout_marginTop="28sp"/>
-
-    <TextView
-        android:id="@+id/lblStudentNo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/login_username"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/lblInfo"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="40sp"
-        android:layout_marginTop="14sp"/>
+        app:layout_constraintTop_toBottomOf="@+id/strathLogo" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/studentNo"
+        android:id="@+id/studentID"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint=""
-        app:layout_constraintTop_toBottomOf="@id/lblStudentNo"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="40sp"
-        android:layout_marginTop="14sp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp">
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/lblPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/login_password"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/studentNo"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="40sp"
-        android:layout_marginTop="14sp"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/userPwd"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint=""
-        app:layout_constraintTop_toBottomOf="@id/lblPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="40sp"
-        android:layout_marginTop="14sp"
+        android:hint="Enter Student Number"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
-        app:endIconMode="password_toggle">
+        app:layout_constraintBottom_toTopOf="@+id/userPwd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblInfo">
 
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"/>
+            android:inputType="number"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userPwd"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14sp"
+        android:hint="Enter Password"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:endIconMode="password_toggle"
+        app:layout_constraintBottom_toTopOf="@+id/submitBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/studentID">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,34 +85,34 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/yellow"
+        android:text="@string/login"
+        android:textStyle="bold"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
-        android:text="@string/login"
-        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/lblRegister"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userPwd"
-        android:layout_marginStart="40sp"
-        android:layout_marginTop="14sp"/>
+        app:layout_constraintTop_toBottomOf="@+id/userPwd" />
 
     <TextView
         android:id="@+id/lblRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
         android:text="@string/create_account_question"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/submitBtn"
+        app:layout_constraintBottom_toTopOf="@id/createAccBtn"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="40sp"
-        android:layout_marginTop="14sp"/>
+        app:layout_constraintTop_toBottomOf="@+id/submitBtn"
+        android:clickable="true"/>
 
     <Button
         android:id="@+id/createAccBtn"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40sp"
         android:layout_marginTop="14sp"
         android:backgroundTint="@color/yellow"
         android:text="@string/create_account"
@@ -141,6 +122,7 @@
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblRegister" />
 

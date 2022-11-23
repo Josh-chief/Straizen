@@ -4,9 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import com.example.stratizen.R
 import com.example.stratizen.signup_page
 import com.example.stratizen.user_home
+import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,16 +19,18 @@ class MainActivity : AppCompatActivity() {
         val loginbutton: Button = findViewById(R.id.submitBtn)
         val createAccountButton: Button = findViewById(R.id.createAccBtn)
 
-        createAccountButton.setOnClickListener {
-            val registration = Intent(this, signup_page::class.java)
 
-            startActivity(registration)
+        createAccountButton.setOnClickListener {
+            var intent = Intent(this, signup_page::class.java)
+            startActivity(intent)
         }
 
         loginbutton.setOnClickListener{
-            val login = Intent(this, user_home::class.java)
 
-            startActivity(login)
+            val login = Intent(this, user_home::class.java)
+            startActivity(intent)
+
+
         }
     }
 }

@@ -57,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     private fun login() {
 
 
@@ -70,8 +71,24 @@ class MainActivity : AppCompatActivity() {
         if(inputEmail.isEmpty() || inputPassword.isEmpty()){
             Toast.makeText(this, "Fill all fields",Toast.LENGTH_LONG).show()
         }else{
-            var login = Intent(this, user_home::class.java)
-            startActivity(login)
+
+
+            auth.signInWithEmailAndPassword(inputEmail, inputPassword)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+
+                        Toast.makeText(baseContext, "Sign in Successful", Toast.LENGTH_SHORT).show()
+                        var login = Intent(this, user_home::class.java)
+                        startActivity(login)
+
+                    } else {
+
+                        Toast.makeText(baseContext, "Sign in failed.",
+                            Toast.LENGTH_SHORT).show()
+
+                    }
+                }
+
         }
 
 

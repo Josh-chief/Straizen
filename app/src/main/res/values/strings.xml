@@ -13,6 +13,6 @@
     <string name="usernameFullName">Full Name</string>
     <string name="title_activity_user_home">user_home</string>
     <string name="user_Already"><u>Already a user ? Sign In</u></string>
-    <string name="Submit">Submit</string>
+    <string name="Submit">Reset Password</string>
     <string name="Password_reset">Please enter the email of your account you want to reset</string>
 </resources>

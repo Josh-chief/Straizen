@@ -60,7 +60,7 @@
         android:id="@+id/studentNo"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-
+        app:counterMaxLength="6"
         android:hint="Enter Student Number"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"

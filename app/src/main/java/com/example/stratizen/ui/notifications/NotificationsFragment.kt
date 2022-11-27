@@ -1,13 +1,19 @@
 package com.example.stratizen.ui.notifications
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.straizen.MainActivity
 import com.example.stratizen.databinding.FragmentNotificationsBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class NotificationsFragment : Fragment() {
 
@@ -28,9 +34,14 @@ class NotificationsFragment : Fragment() {
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        val signoutBtn: Button = binding.btnSignOut
+
+
+        signoutBtn.setOnClickListener {
+            Firebase.auth.signOut()
+            val intent = Intent(activity, MainActivity::class.java)
+            startActivity(intent)
+
         }
         return root
     }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -34,15 +35,18 @@ class NotificationsFragment : Fragment() {
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val signoutBtn: Button = binding.btnSignOut
 
 
-        signoutBtn.setOnClickListener {
+        val iconsignout: LinearLayout = binding.iconSignOut
+
+
+        iconsignout.setOnClickListener {
             Firebase.auth.signOut()
             val intent = Intent(activity, MainActivity::class.java)
             startActivity(intent)
-
         }
+
+
         return root
     }
 
